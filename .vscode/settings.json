@@ -1,0 +1,48 @@
+{
+  "mcp": {
+    "inputs": [],
+    "servers": {
+      "Context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp@latest"
+        ]
+      },
+      // "taskmanager": {
+      //   "command": "npx",
+      //   "args": [
+      //     "-y",
+      //     "@kazuph/mcp-taskmanager"
+      //   ],
+      //   "type": "stdio"
+      // },
+      "shrimp-task-manager": {
+        "command": "npx",
+        "args": ["-y", "mcp-shrimp-task-manager"],
+        "env": {
+          "DATA_DIR": "/home/marjan/Work/PROJECTS/TaskMaster/tasks",
+          "TEMPLATES_USE": "en",
+          "ENABLE_GUI": "true"
+        }
+      },
+      "sequential-thinking": {
+        "type": "stdio", // Added for consistency; optional if not required by your extension
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ]
+      },
+      "github-remote": {
+        "type": "http",
+        "url": "https://api.githubcopilot.com/mcp/"
+      },
+      "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+      }
+    }
+  }
+}
