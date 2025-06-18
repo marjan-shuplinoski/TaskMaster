@@ -1,0 +1,79 @@
+{
+  "info": {
+    "_postman_id": "taskmaster-categories-collection",
+    "name": "TaskMaster Categories API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Categories",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/categories",
+          "host": ["{{base_url}}"],
+          "path": ["categories"]
+        }
+      }
+    },
+    {
+      "name": "Create Category",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"New Category\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/categories",
+          "host": ["{{base_url}}"],
+          "path": ["categories"]
+        }
+      }
+    },
+    {
+      "name": "Update Category",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Category\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/categories/:id",
+          "host": ["{{base_url}}"],
+          "path": ["categories", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Delete Category",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/categories/:id",
+          "host": ["{{base_url}}"],
+          "path": ["categories", ":id"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:5000/api/v1" },
+    { "key": "jwt", "value": "" }
+  ]
+}

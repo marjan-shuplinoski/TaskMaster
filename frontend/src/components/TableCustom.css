@@ -1,0 +1,40 @@
+.task-table-header {
+  background: rgb(138,43,226) !important;
+  color: white !important;
+}
+.task-table-row-completed {
+  background: rgba(0,128,0,0.08) !important;
+}
+.task-table-row-inprogress {
+  background: rgba(255,140,0,0.08) !important;
+}
+.task-table-row-todo {
+  background: rgba(138,43,226,0.08) !important;
+}
+
+.task-table-done-btn {
+  background: green !important;
+  color: white !important;
+  border: none !important;
+}
+.task-table-done-btn:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+
+.category-table-header {
+  background: rgb(138,43,226) !important;
+  color: white !important;
+}
+.category-table-cell-header {
+  background: rgb(138,43,226) !important;
+  color: white !important;
+}
+.category-table-row {
+  background: white !important;
+  color: black !important;
+}
+.category-table-cell {
+  background: white !important;
+  color: black !important;
+}
